@@ -1,0 +1,70 @@
+{
+  "name": "micup.gg.js",
+  "version": "1.0.0",
+  "description": "MicUp.gg.js (micup.gg.js): A powerful, high-performance Node.js library that allows you to easily interact with the Micup API, Gateway, and LiveKit Voice with 100% API coverage.",
+  "main": "src/index.js",
+  "types": "types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./types/index.d.ts",
+      "default": "./src/index.js"
+    },
+    "./voice": {
+      "types": "./types/voice.d.ts",
+      "default": "./src/voice/VoiceConnection.js"
+    },
+    "./rest": {
+      "types": "./types/rest.d.ts",
+      "default": "./src/rest/RESTManager.js"
+    },
+    "./gateway": {
+      "types": "./types/gateway.d.ts",
+      "default": "./src/gateway/GatewayManager.js"
+    },
+    "./structures": {
+      "types": "./types/structures.d.ts",
+      "default": "./src/structures/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "test": "node ../../tests/test-package.js && node ../../tests/test-voice.js",
+    "watch": "node --watch src/index.js"
+  },
+  "keywords": [
+    "micup",
+    "micup.gg.js",
+    "micup.gg",
+    "micup-bot",
+    "micup-api",
+    "gateway",
+    "rest",
+    "voice",
+    "bot"
+  ],
+  "author": "MicUp.gg.js Team",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "peerDependencies": {
+    "@livekit/rtc-node": ">=0.13.0",
+    "ffmpeg-static": ">=5.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@livekit/rtc-node": {
+      "optional": true
+    },
+    "ffmpeg-static": {
+      "optional": true
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pappu100code/micupjs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Pappu100code/micupjs/issues"
+  },
+  "homepage": "https://github.com/Pappu100code/micupjs#readme"
+}
