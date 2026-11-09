@@ -304,8 +304,8 @@ npm publish --access public
 
 ## Links
 
-- GitHub Repository: https://github.com/Pappu100code/micupjs
-- Issue Tracker: https://github.com/Pappu100code/micupjs/issues
+- GitHub Repository: https://github.com/Pappu100code/micup.gg.js
+- Issue Tracker: https://github.com/Pappu100code/micup.gg.js/issues
 
 ---
 
