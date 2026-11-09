@@ -2,12 +2,13 @@
 
 const Endpoints = require('./Endpoints');
 const RESTError = require('./RESTError');
+const pkg = require('../../package.json');
 
 class RESTManager {
   constructor(client) {
     this.client = client;
     this.baseURL = client.options.apiBaseUrl || 'https://micup.gg/api/v10';
-    this.userAgent = client.options.userAgent || 'micup.gg.js/1.0.0 (https://micup.gg)';
+    this.userAgent = client.options.userAgent || `micup.gg.js/${pkg.version || '1.0.1'} (https://micup.gg)`;
   }
 
   get token() {

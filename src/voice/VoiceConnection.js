@@ -2,7 +2,11 @@
 
 const EventEmitter = require('events');
 const { spawn } = require('child_process');
-const ffmpegPath = require('ffmpeg-static');
+
+let ffmpegPath = null;
+try {
+  ffmpegPath = require('ffmpeg-static');
+} catch {}
 
 let LiveKit = null;
 try {
@@ -100,7 +104,8 @@ class VoiceConnection extends EventEmitter {
     this.isPlaying = true;
     this.isPaused = false;
 
-    this.ffmpeg = spawn(ffmpegPath, [
+    const binary = this.client?.options?.ffmpegPath || ffmpegPath || 'ffmpeg';
+    this.ffmpeg = spawn(binary, [
       '-reconnect', '1',
       '-reconnect_streamed', '1',
       '-reconnect_delay_max', '5',
